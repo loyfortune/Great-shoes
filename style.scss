@@ -1,0 +1,260 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.section {
+  padding: 7em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.split > * {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  background: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  transition: transform 250ms ease-in-out;
+  opacity: 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.primary-ttle {
+  font-size: 4rem;
+  font-size: clamp(3rem, 4.5rem, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+}
+
+.description {
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 4rem, 5rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+  /* background-image: url(images/shoe-3.png), radial-gradient(#444 #111);
+  background-blend-mode: multiply;
+  background-size: 100%;*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  @supports (background-blend-mode: multiply) {
+    background: url(images/shoe-3.png), radial-gradient(#444 #111);
+    background-blend-mode: multiply;
+  }
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured__item:hover,
+.featured__item:focus {
+  transform: scale(1);
+  opacity: 1;
+  text-shadow: 0 0 2em rgba(255,255,255, 1);
+}
+
+.featured__item:hover .featured__details,
+.featured__item:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 2em rgba(#fff, 1);
+}
+
+.featured__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6%;
+  padding: 100% 100% 0 0;
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+
+.featured__details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.our-products {
+  background: #eee;
+}
+
+.product {
+  padding: 3em 0;
+  border-radius: 3em;
+  margin-bottom: 3em;
+  text-align: left;
+}
+
+.product__title {
+  font-size: 4rem;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 0 0.2em rgba(#000, 0.2);
+  text-transform: uppercase;
+}
+
+@media (min-width: 45em) {
+  .product__image {
+    margin: -5em 0 0 0;
+    float: right;
+    width: 65%;
+    shape-outside: circle(30%);
+    shape-margin: 1em;
+    padding: 0;
+  }
+}
+
+.shoe-1 {
+  background: color-mix(in srgb, #faa700 55%, #e48d00 45%);
+}
+
+.shoe-2 {
+  background: color-mix(in srgb, #fce4b3 50%, #eac886 50%);
+}
+
+.shoe-3 {
+  background: color-mix(in srgb, #6dd5ed 50%, #2193b0 50%);
+}
+
+.btn-1 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1, 125rem;
+  color: white;
+  
+  background: var(--clr-accent, #a1173c);
+  border-radius: 0.25em;
+  /* transition: ;
+  transform: 250ms ease-in-out;
+  opacity: 0.9;*/
+}
+
+.btn-2 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1, 125rem;
+  color: white;
+  background: var(--clr-accent, #7a5307);
+  border-radius: 0.25em;
+  /*transition:
+  transform: 250ms ease-in-out;
+  opacity: 0.9;*/
+}
+
+.btn-3 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1, 125rem;
+  color: white;
+  background: var(--clr-accent, #008951);
+  border-radius: 0.25em;
+}
+/*transition:
+  transform: 250ms ease-in-out;
+  opacity: 0.9;*
+
+
+.product-2 {
+  background-color: lightslategray;
+}
+
+.product-3 {
+  background-color: burlywood;
+}*/
